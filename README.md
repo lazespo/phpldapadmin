@@ -10,7 +10,7 @@ docker compose up -d
 
 3. Configure the LDAP configuration in EspoCRM as follows (instead of `localhost`, specify the IP of your server where EspoCRM is located):
 
-![LDAP settings in EspoCRM](../../_static/images/admin-ldap.png)
+![LDAP settings in EspoCRM](_static/images/admin-ldap.png)
 
 ### Credentials to log in for EspoCRM
 
