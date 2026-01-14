@@ -1,0 +1,38 @@
+# admin user
+dn: cn=admin,dc=espo,dc=local
+changetype: add
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+userPassword: 1
+description: LDAP Administrator
+
+# organisational unit for users
+dn: ou=users,dc=espo,dc=local
+changetype: add
+objectClass: organizationalUnit
+ou: users
+
+# container for users 
+dn: ou=espo-users,ou=users,dc=espo,dc=local
+changetype: add
+objectClass: organizationalUnit
+ou: espo-users
+
+# ldap user
+dn: uid=ldapuser,ou=espo-users,ou=users,dc=espo,dc=local
+changetype: add
+objectClass: inetOrgPerson
+cn: LDAP User
+sn: LDAP User
+uid: ldapuser
+userPassword: 1
+
+# portal user
+dn: uid=portaluser,ou=espo-users,ou=users,dc=espo,dc=local
+changetype: add
+objectClass: inetOrgPerson
+cn: Portal User
+sn: Portal User
+uid: portaluser
+userPassword: 1
